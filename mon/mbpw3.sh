@@ -1,7 +1,7 @@
 #!/bin/bash
 host="mbpw3.us.to"
-ports=(80 443 9090)
-sshs=(22 20021 20022)
+ports=(80 443)
+sshs=(24 25 26)
 timeout=1
 
 # make sure proper ports are open
