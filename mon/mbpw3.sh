@@ -78,5 +78,7 @@ case "$1" in
         domainCheck
         sshCheck  
         portCheck
+        echo
+        tempCheck
         ;;
 esac
