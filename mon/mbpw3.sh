@@ -47,8 +47,8 @@ function domainCheck {
 function tempCheck {
     for port in "${sshs[@]}"
     do
-        tempCmd="hostname | tr -d '\n' && echo ': ' | tr -d '\n' && cat /sys/class/thermal/thermal_zone*/temp | tail -1"
-        ssh -o ConnectTimeout="$timeout" root@"$host" -p "$port" "$tempCmd" 2>/dev/null
+        tempCmd="hostname | tr -d '\n' && echo ': ' | tr -d '\n' && cat /sys/class/thermal/thermal_zone*/temp | tail -1 | awk '{print \$1/1000}' | tr -d '\n'"
+        ssh -o ConnectTimeout="$timeout" root@"$host" -p "$port" "$tempCmd && echo °C" 2>/dev/null
     done 
 }
 
