@@ -1,0 +1,6 @@
+[submodule "service/SWIC_3"]
+	path = service/SWIC_3
+	url = https://github.com/mbednarek360/SWIC_3
+[submodule "service/passplexer"]
+	path = service/passplexer
+	url = https://github.com/mbednarek360/passplexer
